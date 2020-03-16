@@ -24,7 +24,7 @@ const Search = ({getTracks}) => {
 
     return (
         <div>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} className='search-form'>
                 <input 
                     type='text' 
                     placeholder='Search Track' 

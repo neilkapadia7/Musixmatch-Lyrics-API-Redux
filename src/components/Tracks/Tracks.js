@@ -14,20 +14,22 @@ const Tracks = ({tracks: {loading, songs}, removeTracks}) => {
     }, []);
 
     if(!loading && songs === null) {
-        return <h3>No Items Searched</h3>
+        return <center><h3 className='error-title'>No Items Searched</h3></center>
     }
     if(loading && songs === null) {
-        return <h3>loading...</h3>
+        return <center><h3 className='error-title'>Loading...</h3></center>
     }
     return (
-        <div>
+        <div className='track-div'>
             {songs.message.body.track_list.map(song =>
                 <Fragment key={song.track.track_id}>
-                    <div style={{paddingTop: 30}} >
-                        <h3>{song.track.track_name}</h3>
-                        <h5>{song.track.album_name}</h5>
-                        <p>{song.track.artist_name}</p>
-                        <Link to={`lyrics/${song.track.track_id}`}>View Lyrics</Link>
+                    <div className='track-box'>
+                        <div style={{padding: 30}}>
+                            <h3>{song.track.track_name}</h3>
+                            <h5>{song.track.album_name}</h5>
+                            <p>{song.track.artist_name}</p>
+                            <Link to={`lyrics/${song.track.track_id}`}>View Lyrics</Link>
+                        </div>
                     </div>
                 </Fragment>    
             )}

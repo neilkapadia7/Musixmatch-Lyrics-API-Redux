@@ -24,12 +24,14 @@ export default (state = initialState , action) => {
         case REMOVE_LYRICS:
             return {
                 ...state,
-                lyrics: null
+                lyrics: null,
+                loading: false
             }
         case REMOVE_TRACKS:
             return {
                 ...state,
-                songs: null
+                songs: null,
+                loading: false
             }
         case SET_LOADING:
             return {

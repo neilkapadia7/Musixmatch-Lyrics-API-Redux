@@ -14,10 +14,12 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Navbar />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path={`/lyrics/:id`} component={Lyrics}/>
-        </Switch>
+         <div className='body'>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path={`/lyrics/:id`} component={Lyrics}/>
+          </Switch>
+         </div>
       </Router>
     </Provider>
   );
