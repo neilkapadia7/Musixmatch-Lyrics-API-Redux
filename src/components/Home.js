@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Search from './Tracks/Search';
+import Tracks from './Tracks/Tracks';
 
 const Home = () => {
     return (
         <div>
-            <h1>Home</h1>
+            <Search />
+            <Tracks />
         </div>
     )
 }

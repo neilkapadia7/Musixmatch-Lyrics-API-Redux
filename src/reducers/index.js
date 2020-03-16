@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import lyricsReducer from './lyricsReducer';
+import trackReducer from './trackReducer';
 
 export default combineReducers({
-    lyrics: lyricsReducer
+    tracks: trackReducer
 });

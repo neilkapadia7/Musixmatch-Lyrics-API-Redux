@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home'
+import Home from './components/Home';
+import Lyrics from './components/Lyrics/Lyrics';
+import Navbar from './components/Layout/Navbar';
+
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import {Provider} from 'react-redux';
 import store from './store';
@@ -8,10 +12,13 @@ import store from './store';
 const App = () => {
   return (
     <Provider store={store}>
-    <div className="App">
-      <h1>Lyrics Mismatch App</h1>
-      <Home />
-    </div>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path={`/lyrics/:id`} component={Lyrics}/>
+        </Switch>
+      </Router>
     </Provider>
   );
 }
