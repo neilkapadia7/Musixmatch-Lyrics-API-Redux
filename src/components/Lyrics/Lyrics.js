@@ -17,15 +17,15 @@ const Lyrics = props => {
     }, []);
 
     if(loading && lyrics === null) {
-        return <h4>Loading...</h4>
+        return <center><h4 className='error-title'>Loading...</h4></center>
     }
     if(!loading && lyrics === null) {
-        return <h4>Invalid Track</h4>
+        return <center><h4 className='error-title'>Invalid Track</h4></center>
     }
 
     return (
-        <div>
-            <h4>Lyrics Page</h4>
+        <div className='lyrics-div'>
+            <h4 className='error-title'>Song Lyrics</h4>
             <p>{lyrics.message.body.lyrics.lyrics_body}</p>
         </div>
     )

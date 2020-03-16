@@ -105,6 +105,11 @@ nav ul li a {
   margin: 30px 1%;
   box-shadow: 0px 0px 20px rgb(236, 236, 236);
   display: table;
+  transition: .4s ease;
+}
+.track-box:hover{
+  box-shadow: 0px 0px 25px rgb(192, 192, 192);
+  transition: .5s ease;
 }
 .track-box h3 {
   margin: 0;
@@ -143,4 +148,16 @@ nav ul li a {
 }
 .track-box a:hover {
   text-decoration: none;
+  background-color: rgb(253, 117, 138);
+}
+
+.lyrics-div{
+  width: 50%;
+  margin-right: 50%;
+}
+.lyrics-div p{
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #353535;
 }
